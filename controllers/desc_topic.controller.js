@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const DescTopic = require("../schemas/DescTopic");
-const { descTopicValidation } = require("../validation/desc_topic.validation");
+const DescTopic = require("../schemas/Desc_topic");
+const { descTopicValidation } = require("../validation/descTopic.validation");
 const { sendErrorResponse } = require("../helpers/send_error_response");
 
 const addDescTopic = async (req, res) => {
