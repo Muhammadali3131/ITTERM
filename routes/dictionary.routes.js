@@ -1,3 +1,5 @@
+const router = require("express").Router();
+
 const {
   addDictionary,
   getAllDictionaries,
@@ -6,9 +8,10 @@ const {
   deleteDictionaryById,
 } = require("../controllers/dictionary.controller");
 
-const router = require("express").Router();
+const authorExpertGuard = require("../middlewares/guards/author-expert.guard");
+const authorJwtGuard = require("../middlewares/guards/author-jwt.guard");
 
-router.post("/create", addDictionary);
+router.post("/create", authorJwtGuard, authorExpertGuard, addDictionary);
 router.get("/all", getAllDictionaries);
 router.get("/:id", getDictionaryById);
 router.put("/:id", updateDictionaryById);
