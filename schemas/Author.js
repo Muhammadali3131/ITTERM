@@ -13,6 +13,8 @@ const authorSchema = new Schema(
     photo: { type: String },
     is_expert: { type: Boolean },
     is_active: { type: Boolean },
+    refresh_token: { type: String },
+    activation_link: { type: String },
   },
   {
     versionKey: false,

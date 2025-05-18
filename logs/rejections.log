@@ -1,0 +1,12 @@
+2025-05-16T10:52:36.846Z [ITTERM] error: unhandledRejection: UnHandledRejection example
+Error: UnHandledRejection example
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:140:14
+    at new Promise (<anonymous>)
+    at loginAuthor (D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:139:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-05-16T11:14:37.274Z [ITTERM] error: unhandledRejection: UnHandledRejection example
+Error: UnHandledRejection example
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:140:14
+    at new Promise (<anonymous>)
+    at loginAuthor (D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:139:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

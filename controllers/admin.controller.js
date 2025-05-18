@@ -5,6 +5,7 @@ const { sendErrorResponse } = require("../helpers/send_error_response");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const jwtAdminService = require("../services/jwt.admin.service");
 
 const addAdmin = async (req, res) => {
   try {
@@ -114,13 +115,84 @@ const loginAdmin = async (req, res) => {
       is_creator: admin.admin_is_creator,
     };
 
-    const token = jwt.sign(payload, config.get("tokenKey"), {
+    const token = jwt.sign(payload, config.get("tokenKeyAdmin"), {
       expiresIn: config.get("tokenExpTime"),
     });
 
     res
       .status(200)
       .send({ message: "Tizimga xush kelibsiz", token, id: admin._id });
+  } catch (error) {
+    sendErrorResponse(error, res);
+  }
+};
+
+const logoutAdmin = async (req, res) => {
+  try {
+    const { refreshToken } = req.cookies;
+
+    if (!refreshToken) {
+      return res
+        .status(400)
+        .send({ message: "Cookieda refresh token topilmadi" });
+    }
+    const admin = await Admin.findOneAndUpdate(
+      { refresh_token: refreshToken },
+      {
+        refresh_token: "",
+      },
+      {
+        new: true,
+      }
+    );
+    if (!admin) {
+      return res.status(400).send({ message: "Token noto'g'ri" });
+    }
+
+    res.clearCookie("refreshToken");
+    res.send({ admin });
+  } catch (error) {
+    sendErrorResponse(error, res);
+  }
+};
+
+const refreshAdminToken = async (req, res) => {
+  try {
+    const { refreshToken } = req.cookies;
+
+    if (!refreshToken) {
+      return res
+        .status(400)
+        .send({ message: "Cookieda refresh token topilmadi" });
+    }
+
+    await jwtAdminService.verifyRefreshToken(refreshToken);
+    const admin = await Admin.findOne({ refresh_token: refreshToken });
+    if (!admin) {
+      return res
+        .status(401)
+        .send({ message: "Bazada refresh token topilmadi" });
+    }
+    const payload = {
+      id: admin._id,
+      email: admin.email,
+      is_active: admin.is_active,
+      is_expert: admin.is_expert,
+    };
+    const tokens = jwtAdminService.generateTokens(payload);
+    admin.refresh_token = tokens.refreshToken;
+    await admin.save();
+
+    res.cookie("refreshToken", tokens.refreshToken, {
+      httpOnly: true,
+      maxAge: config.get("cookie_refresh_time"),
+    });
+
+    res.status(201).send({
+      message: "Tokenlar yangilandi",
+      id: admin.id,
+      accessToken: tokens.accessToken,
+    });
   } catch (error) {
     sendErrorResponse(error, res);
   }
@@ -133,4 +205,6 @@ module.exports = {
   updateAdminById,
   deleteAdminById,
   loginAdmin,
+  logoutAdmin,
+  refreshAdminToken
 };

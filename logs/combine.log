@@ -1,0 +1,91 @@
+2025-05-16T10:50:46.757Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:50:46.765Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:50:46.767Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:50:46.768Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:51:04.529Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:51:04.536Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:51:04.537Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:51:04.538Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:52:03.859Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:52:03.866Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:52:03.868Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:52:03.869Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:52:09.362Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:52:09.369Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:52:09.371Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:52:09.372Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:52:33.795Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:52:33.799Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:52:33.800Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:52:33.801Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:52:36.846Z [ITTERM] error: unhandledRejection: UnHandledRejection example
+Error: UnHandledRejection example
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:140:14
+    at new Promise (<anonymous>)
+    at loginAuthor (D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:139:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-05-16T10:53:06.817Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:53:06.821Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:53:06.823Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:53:06.824Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:53:25.329Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:53:25.334Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:53:25.337Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:53:25.342Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:54:27.215Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:54:27.219Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:54:27.220Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:54:27.221Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:56:36.863Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:56:36.868Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:56:36.870Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:56:36.871Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:56:38.516Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:56:38.522Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:56:38.525Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:56:38.526Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:56:42.250Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:56:42.255Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:56:42.257Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:56:42.258Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:56:47.016Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:56:47.023Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:56:47.025Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:56:47.025Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:56:49.751Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T10:56:49.757Z [ITTERM] error: Error ma'lumot
+2025-05-16T10:56:49.759Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T10:56:49.760Z [ITTERM] info: Info ma'lumot
+2025-05-16T10:57:07.026Z [ITTERM] error: Expected ',' or '}' after property value in JSON at position 41 (line 3 column 5)
+2025-05-16T11:00:53.114Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T11:00:53.120Z [ITTERM] error: Error ma'lumot
+2025-05-16T11:00:53.122Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T11:00:53.123Z [ITTERM] info: Info ma'lumot
+2025-05-16T11:03:00.527Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T11:03:00.532Z [ITTERM] error: Error ma'lumot
+2025-05-16T11:03:00.534Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T11:03:00.534Z [ITTERM] info: Info ma'lumot
+2025-05-16T11:03:07.904Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T11:03:07.909Z [ITTERM] error: Error ma'lumot
+2025-05-16T11:03:07.910Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T11:03:07.910Z [ITTERM] info: Info ma'lumot
+2025-05-16T11:04:18.443Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T11:04:18.448Z [ITTERM] error: Error ma'lumot
+2025-05-16T11:04:18.449Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T11:04:18.450Z [ITTERM] info: Info ma'lumot
+2025-05-16T11:06:26.536Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T11:06:26.543Z [ITTERM] error: Error ma'lumot
+2025-05-16T11:06:26.544Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T11:06:26.544Z [ITTERM] info: Info ma'lumot
+2025-05-16T11:11:33.293Z [ITTERM] info: Oddiy LOG ma'lumot
+2025-05-16T11:11:33.298Z [ITTERM] error: Error ma'lumot
+2025-05-16T11:11:33.300Z [ITTERM] warn: Warn ma'lumot
+2025-05-16T11:11:33.301Z [ITTERM] info: Info ma'lumot
+2025-05-16T11:14:37.274Z [ITTERM] error: unhandledRejection: UnHandledRejection example
+Error: UnHandledRejection example
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:140:14
+    at new Promise (<anonymous>)
+    at loginAuthor (D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:139:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-05-16T11:19:37.677Z [ITTERM] error: Expected ',' or '}' after property value in JSON at position 41 (line 3 column 5)
+2025-05-16T11:46:35.431Z [ITTERM] error: Expected ',' or '}' after property value in JSON at position 41 (line 3 column 5)

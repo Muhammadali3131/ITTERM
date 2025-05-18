@@ -1,8 +1,9 @@
 const { sendErrorResponse } = require("../../helpers/send_error_response")
 const jwt = require("jsonwebtoken");
 const config = require('config');
+const jwtService = require("../../services/jwt.service");
 
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
   try {
 
     const authorization = req.headers.authorization;
@@ -21,12 +22,14 @@ module.exports = (req, res, next) => {
       return res.status(401).send({ message: "Bearer token berilmagan" });
     }
 
-    const decodedPayload = jwt.verify(token, config.get("tokenKeyAuthor"));
+    // const decodedPayload = jwt.verify(token, config.get("tokenKeyAuthor"));
+
+    const decodedPayload = await jwtService.verifyAccessToken(token)
 
     // EMAIL darsidan so'ng faollashtiramiz
-    // if(!decodedPayload.is_active){
-    //   return res.status(403).send({ message: "Active bo'lmagan foydalanuvchi" });
-    // }
+    if(!decodedPayload.is_active){
+      return res.status(403).send({ message: "Active bo'lmagan foydalanuvchi" });
+    }
 
     req.author = decodedPayload
 

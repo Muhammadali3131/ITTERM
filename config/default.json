@@ -4,5 +4,27 @@
   "tokenKeyAuthor": "MySecretTokenKeyAuthor",
   "tokenExpTime": "24h",
   "tokenKeyAdmin": "MySecretTokenKeyAdmin",
-  "tokenKeyUser": "MySecretTokenKeyUser"
+  "tokenKeyUser": "MySecretTokenKeyUser",
+
+  "access_key": "AccessTokenSecretKeysokdskodsoioi",
+  "refresh_key": "RefreshTokenSecretKeysokdskodsoioi",
+  "access_time": "15h",
+  "refresh_time": "15d",
+  "cookie_refresh_time": 1296000000,
+
+  "access_key_admin": "AccessTokenSecretKeyAdmin",
+  "refresh_key_admin": "RefreshTokenSecretKeyAdmin",
+  "access_time_admin": "12h",
+  "refresh_time_admin": "12d",
+
+  "access_key_user": "AccessTokenSecretKeyUser",
+  "refresh_key_user": "RefreshTokenSecretKeyUser",
+  "access_time_user": "10h",
+  "refresh_time_user": "10d",
+
+  "smtp_password": "wtfgbyjfrjpsnone",
+  "smtp_host": "smtp.gmail.com",
+  "smtp_port": "587",
+  "smtp_user": "komilovmuhammadali3131@gmail.com",
+  "api_url": "http://localhost:3333"
 }

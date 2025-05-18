@@ -5,6 +5,7 @@ const { sendErrorResponse } = require("../helpers/send_error_response");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const config = require("config");
+const jwtUserService = require("../services/jwt.user.service");
 
 const addUser = async (req, res) => {
   try {
@@ -104,11 +105,103 @@ const loginUser = async (req, res) => {
       is_active: user.user_is_active,
     };
 
-    const token = jwt.sign(payload, config.get("tokenKey"), {
+    const token = jwt.sign(payload, config.get("tokenKeyUser"), {
       expiresIn: config.get("tokenExpTime"),
     });
 
     res.status(200).send({ message: "Xush kelibsiz", token });
+  } catch (error) {
+    sendErrorResponse(error, res);
+  }
+};
+
+const logoutUser = async (req, res) => {
+  try {
+    const { refreshToken } = req.cookies;
+
+    if (!refreshToken) {
+      return res
+        .status(400)
+        .send({ message: "Cookieda refresh token topilmadi" });
+    }
+    const user = await User.findOneAndUpdate(
+      { refresh_token: refreshToken },
+      {
+        refresh_token: "",
+      },
+      {
+        new: true,
+      }
+    );
+    if (!user) {
+      return res.status(400).send({ message: "Token noto'g'ri" });
+    }
+
+    res.clearCookie("refreshToken");
+    res.send({ user });
+  } catch (error) {
+    sendErrorResponse(error, res);
+  }
+};
+
+const refreshUserToken = async (req, res) => {
+  try {
+    const { refreshToken } = req.cookies;
+
+    if (!refreshToken) {
+      return res
+        .status(400)
+        .send({ message: "Cookieda refresh token topilmadi" });
+    }
+
+    await jwtUserService.verifyRefreshToken(refreshToken);
+    const user = await User.findOne({ refresh_token: refreshToken });
+    if (!user) {
+      return res
+        .status(401)
+        .send({ message: "Bazada refresh token topilmadi" });
+    }
+    const payload = {
+      id: user._id,
+      email: user.email,
+      is_active: user.is_active,
+      is_expert: user.is_expert,
+    };
+    const tokens = jwtUserService.generateTokens(payload);
+    user.refresh_token = tokens.refreshToken;
+    await user.save();
+
+    res.cookie("refreshToken", tokens.refreshToken, {
+      httpOnly: true,
+      maxAge: config.get("cookie_refresh_time"),
+    });
+
+    res.status(201).send({
+      message: "Tokenlar yangilandi",
+      id: user.id,
+      accessToken: tokens.accessToken,
+    });
+  } catch (error) {
+    sendErrorResponse(error, res);
+  }
+};
+
+const userActivate = async (req, res) => {
+  try {
+    const { link } = req.params;
+    const user = await User.findOne({ activation_link: link });
+
+    if (!user) {
+      return res.status(400).send({ message: "User link noto'g'ri" });
+    }
+
+    if (user.is_active) {
+      return res.status(400).send({ message: "User avval faollashtirilgan" });
+    }
+
+    user.is_active = true;
+    await user.save();
+    res.send({ message: "User faollashtirildi", isActive: user.is_active });
   } catch (error) {
     sendErrorResponse(error, res);
   }
@@ -121,4 +214,7 @@ module.exports = {
   updateUserById,
   deleteUserById,
   loginUser,
+  logoutUser,
+  refreshUserToken,
+  userActivate,
 };
