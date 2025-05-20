@@ -10,3 +10,27 @@ Error: UnHandledRejection example
     at new Promise (<anonymous>)
     at loginAuthor (D:\Najot ta'lim\Fullstack\node.js\ITTERM\controllers\author.controller.js:139:5)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-05-19T10:55:05.097Z [ITTERM] error: unhandledRejection: The "paths[0]" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+    at Object.resolve (node:path:198:9)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:103:29)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:9:12)
+    at ExpressHandlebars.getTemplate (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:102:16)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:144:22)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+2025-05-19T10:55:06.873Z [ITTERM] error: unhandledRejection: The "paths[0]" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+    at Object.resolve (node:path:198:9)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:103:29)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:9:12)
+    at ExpressHandlebars.getTemplate (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:102:16)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:144:22)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71

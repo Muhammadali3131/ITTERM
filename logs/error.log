@@ -32,3 +32,39 @@ Error: UnHandledRejection example
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-05-16T11:19:37.677Z [ITTERM] error: Expected ',' or '}' after property value in JSON at position 41 (line 3 column 5)
 2025-05-16T11:46:35.431Z [ITTERM] error: Expected ',' or '}' after property value in JSON at position 41 (line 3 column 5)
+2025-05-19T10:55:05.097Z [ITTERM] error: unhandledRejection: The "paths[0]" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+    at Object.resolve (node:path:198:9)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:103:29)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:9:12)
+    at ExpressHandlebars.getTemplate (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:102:16)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:144:22)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+2025-05-19T10:55:06.873Z [ITTERM] error: unhandledRejection: The "paths[0]" argument must be of type string. Received undefined
+TypeError [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
+    at Object.resolve (node:path:198:9)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:103:29)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+    at new Promise (<anonymous>)
+    at __awaiter (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:9:12)
+    at ExpressHandlebars.getTemplate (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:102:16)
+    at ExpressHandlebars.<anonymous> (D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:144:22)
+    at Generator.next (<anonymous>)
+    at D:\Najot ta'lim\Fullstack\node.js\ITTERM\node_modules\express-handlebars\dist\express-handlebars.js:13:71
+2025-05-20T06:59:56.673Z [ITTERM] error: topicsModel is not defined
+2025-05-20T07:00:00.089Z [ITTERM] error: topicsModel is not defined
+2025-05-20T07:00:46.534Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:47.247Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:47.698Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:48.034Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:48.362Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:48.530Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:48.721Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:48.887Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:49.035Z [ITTERM] error: Cannot read properties of undefined (reading 'find')
+2025-05-20T07:00:49.179Z [ITTERM] error: Cannot read properties of undefined (reading 'find')

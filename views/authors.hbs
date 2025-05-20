@@ -1,0 +1,17 @@
+<h1 style="text-align: center;">{{title}}</h1>
+<div class="container" style="display:flex; gap:15px">
+  {{#each authors}}
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://www.millcitypress.net/wp-content/uploads/2018/08/author-bios.jpg"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <p class="card-text">{{first_name}}</p>
+      </div>
+    </div>
+
+  {{/each}}
+</div>

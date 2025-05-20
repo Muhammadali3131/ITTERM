@@ -6,6 +6,7 @@ const { sendErrorResponse } = require("../helpers/send_error_response");
 const addTopic = async (req, res) => {
   try {
     const { error, value } = topicValidation(req.body);
+
     if (error) return sendErrorResponse(error, res);
 
     const newTopic = await Topic.create(value);
