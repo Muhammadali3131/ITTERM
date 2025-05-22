@@ -15,44 +15,18 @@
   <div class="mb-3">
     <label for="password" class="form-label">Password</label>
     <input
-    type="password"
-    id="password"
-    name="password"
-    class="form-control"
-    value="1234567"
+      type="password"
+      id="password"
+      name="password"
+      class="form-control"
+      value="1234567"
     />
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<script src="./js/script.js">
+</script>
 
 <script>
-  const loginForm = document.getElementById("loginForm")
-
-  loginForm.addEventListener("submit", async (e)=>{
-    e.preventDefault()
-    const email = document.getElementById("email").value
-    const password = document.getElementById("password").value
-    try{
-      fetch('http://localhost:3333/api/author/login', {
-        method: "POST",
-        headers: {
-          'Content-Type': "application/json"
-        },
-        body: JSON.stringify({
-          email,
-          password
-        })
-      }).then((response)=>{
-        console.log(response)
-        if (response.ok){
-          console.log("Login successfully")
-          return response.json()
-        } else {
-          console.log('Login failed')
-        }
-      })
-    } catch (error){
-      console.log(error)
-    }
-  })
+  login()
 </script>

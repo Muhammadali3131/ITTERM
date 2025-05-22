@@ -29,7 +29,7 @@ app.set("views", "./views");
 
 app.use(express.static("views"));
 
-app.use("/", viewRouter);     // Frontend
+app.use("/", viewRouter); // Frontend
 app.use("/api", indexRouter); // Backend
 
 app.use(errorHandlingMiddleware);

@@ -33,12 +33,9 @@ router.get("/authors", async (req, res) => {
 });
 
 router.get("/topics", async (req, res) => {
-  let topics = await Topic.find().lean();
-
   res.render(createViewPage("topics"), {
     title: "Maqolalar",
     isTopic: true,
-    topics,
   });
 });
 

@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">{{title}}</h1>
+{{!-- <h1 style="text-align: center;">{{title}}</h1>
 <div class="container" style="display:flex; gap:15px">
   {{#each topics}}
 
@@ -14,4 +14,53 @@
     </div>
 
   {{/each}}
-</div>
+</div> --}}
+
+<h3 style="text-align: center;">Maqolalar</h3>
+
+<div class="container" style="display: flex; gap: 15px" id="container"></div>
+
+<script>
+ const container = document.getElementById("container")
+
+async function getTopics() {
+  let accessToken = localStorage.getItem("accessToken")
+  try {
+     let respose = await fetch("http://localhost:3333/api/topic/all", {
+      method:"GET",
+      headers: {
+            Authorization: `Bearer ${accessToken}`,
+            "Content-type": "application/json",
+        },
+     })
+
+     let data = await respose.json()
+     console.log(data)
+     let topics = ''
+     data.topics.forEach((val) => {
+        topics+=`
+              <div class="card" style="width: 18rem;">
+                <img
+                  src="https://static.vecteezy.com/system/resources/previews/003/025/884/non_2x/topic-concept-with-wooden-block-on-wooden-table-background-free-photo.jpg"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">${val.topic_text}</p>
+                  <button class="btn ${val.is_checked ? 'btn-success' : 'btn-danger'}">
+                      ${val.is_checked ? "Active" : "Passive"}
+                  </button>
+                </div>
+              </div>
+             `
+     })
+     container.innerHTML = topics
+
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+getTopics()
+
+</script>

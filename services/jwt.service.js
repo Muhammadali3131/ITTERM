@@ -14,7 +14,7 @@ class JwtSercive {
       expiresIn: this.accessTime,
     });
     const refreshToken = jwt.sign(payload, this.refreshKey, {
-      expiresIn: this.accessTime,
+      expiresIn: this.refreshTime,
     });
     return {
       accessToken,
